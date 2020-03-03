@@ -1,0 +1,966 @@
+08:42:19 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for 'all'.
+08:42:43 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for 'all'.
+09:12:46 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2696	    268	   3108	   6072	   17b8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+09:12:55 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2696	    268	   3108	   6072	   17b8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+09:13:27 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:32:30: error: 'IOMod' undeclared (first use in this function); did you mean 'IOmod'?
+     XIOModule_DiscreteWrite(&IOMod, 4, col);    //send first color!
+                              ^~~~~
+                              IOmod
+../src/microcontroller.c:32:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/microcontroller.c:69:28: warning: statement with no effect [-Wunused-value]
+         else if(hor == -1) ver 19;
+                            ^~~
+../src/microcontroller.c:69:31: error: expected ';' before numeric constant
+         else if(hor == -1) ver 19;
+                               ^~~
+                               ;
+../src/microcontroller.c:85:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:103:17: error: redefinition of 'i'
+             int i = 4;
+                 ^
+../src/microcontroller.c:82:17: note: previous definition of 'i' was here
+             int i = 4;
+                 ^
+../src/microcontroller.c:106:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:124:17: error: redefinition of 'i'
+             int i = 4;
+                 ^
+../src/microcontroller.c:103:17: note: previous definition of 'i' was here
+             int i = 4;
+                 ^
+../src/microcontroller.c:127:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:141:34: error: expected expression before '=' token
+                 if(i != 3) col <== 1; //all 12 bits populated
+                                  ^
+make: *** [src/subdir.mk:29: src/microcontroller.o] Error 1
+09:13:38 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:69:28: warning: statement with no effect [-Wunused-value]
+         else if(hor == -1) ver 19;
+                            ^~~
+../src/microcontroller.c:69:31: error: expected ';' before numeric constant
+         else if(hor == -1) ver 19;
+                               ^~~
+                               ;
+../src/microcontroller.c:85:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:103:17: error: redefinition of 'i'
+             int i = 4;
+                 ^
+../src/microcontroller.c:82:17: note: previous definition of 'i' was here
+             int i = 4;
+                 ^
+../src/microcontroller.c:106:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:124:17: error: redefinition of 'i'
+             int i = 4;
+                 ^
+../src/microcontroller.c:103:17: note: previous definition of 'i' was here
+             int i = 4;
+                 ^
+../src/microcontroller.c:127:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:141:34: error: expected expression before '=' token
+                 if(i != 3) col <== 1; //all 12 bits populated
+                                  ^
+make: *** [src/subdir.mk:29: src/microcontroller.o] Error 1
+09:14:29 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:73:17: error: expected ';' before '}' token
+          hor = 0
+                 ^
+                 ;
+         } else if(hor == -1) {
+         ~        
+../src/microcontroller.c:75:10: warning: statement with no effect [-Wunused-value]
+          ver 19;
+          ^~~
+../src/microcontroller.c:75:13: error: expected ';' before numeric constant
+          ver 19;
+             ^~~
+             ;
+../src/microcontroller.c:92:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:110:17: error: redefinition of 'i'
+             int i = 4;
+                 ^
+../src/microcontroller.c:89:17: note: previous definition of 'i' was here
+             int i = 4;
+                 ^
+../src/microcontroller.c:113:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:131:17: error: redefinition of 'i'
+             int i = 4;
+                 ^
+../src/microcontroller.c:110:17: note: previous definition of 'i' was here
+             int i = 4;
+                 ^
+../src/microcontroller.c:134:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:148:34: error: expected expression before '=' token
+                 if(i != 3) col <== 1; //all 12 bits populated
+                                  ^
+make: *** [src/subdir.mk:29: src/microcontroller.o] Error 1
+09:14:34 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:75:10: warning: statement with no effect [-Wunused-value]
+          ver 19;
+          ^~~
+../src/microcontroller.c:75:13: error: expected ';' before numeric constant
+          ver 19;
+             ^~~
+             ;
+../src/microcontroller.c:92:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:110:17: error: redefinition of 'i'
+             int i = 4;
+                 ^
+../src/microcontroller.c:89:17: note: previous definition of 'i' was here
+             int i = 4;
+                 ^
+../src/microcontroller.c:113:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:131:17: error: redefinition of 'i'
+             int i = 4;
+                 ^
+../src/microcontroller.c:110:17: note: previous definition of 'i' was here
+             int i = 4;
+                 ^
+../src/microcontroller.c:134:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:148:34: error: expected expression before '=' token
+                 if(i != 3) col <== 1; //all 12 bits populated
+                                  ^
+make: *** [src/subdir.mk:29: src/microcontroller.o] Error 1
+09:14:37 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:92:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:110:17: error: redefinition of 'i'
+             int i = 4;
+                 ^
+../src/microcontroller.c:89:17: note: previous definition of 'i' was here
+             int i = 4;
+                 ^
+../src/microcontroller.c:113:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:131:17: error: redefinition of 'i'
+             int i = 4;
+                 ^
+../src/microcontroller.c:110:17: note: previous definition of 'i' was here
+             int i = 4;
+                 ^
+../src/microcontroller.c:134:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:148:34: error: expected expression before '=' token
+                 if(i != 3) col <== 1; //all 12 bits populated
+                                  ^
+make: *** [src/subdir.mk:29: src/microcontroller.o] Error 1
+09:15:47 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:92:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:113:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:134:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/microcontroller.o: in function `main':
+C:\Users\nhtranngoc\Documents\ECE3829LAB4\project_4\project_4.sdk\hello_world\Debug/../src/microcontroller.c:9: multiple definition of `main'; ./src/helloworld.o:C:\Users\nhtranngoc\Documents\ECE3829LAB4\project_4\project_4.sdk\hello_world\Debug/../src/helloworld.c:55: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: hello_world.elf] Error 1
+09:15:52 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:92:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:113:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:134:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/microcontroller.o: in function `main':
+C:\Users\nhtranngoc\Documents\ECE3829LAB4\project_4\project_4.sdk\hello_world\Debug/../src/microcontroller.c:9: multiple definition of `main'; ./src/helloworld.o:C:\Users\nhtranngoc\Documents\ECE3829LAB4\project_4\project_4.sdk\hello_world\Debug/../src/helloworld.c:55: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: hello_world.elf] Error 1
+09:16:08 **** Clean-only build of configuration Debug for project hello_world ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/microcontroller.o ./src/platform.o  ./src/helloworld.d ./src/microcontroller.d ./src/platform.d  hello_world.elf.size  hello_world.elf
+' '
+09:16:08 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:92:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:113:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:134:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12100	    724	   3120	  15944	   3e48	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+09:16:30 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for 'all'.
+09:34:02 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:25:1: error: unknown type name 'ss'; did you mean 's8'?
+ ss
+ ^~
+ s8
+../src/microcontroller.c:26:9: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'col'
+     u32 col = 15;   //default color, 15 is green
+         ^~~
+../src/microcontroller.c:32:40: error: 'col' undeclared (first use in this function)
+     XIOModule_DiscreteWrite(&IOmod, 4, col);    //send first color!
+                                        ^~~
+../src/microcontroller.c:32:40: note: each undeclared identifier is reported only once for each function it appears in
+../src/microcontroller.c:92:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:113:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:134:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+09:34:42 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:30:1: error: unknown type name 'ss'; did you mean 's8'?
+ ss
+ ^~
+ s8
+../src/microcontroller.c:31:9: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'col'
+     u32 col = 15;   //default color, 15 is green
+         ^~~
+../src/microcontroller.c:37:40: error: 'col' undeclared (first use in this function)
+     XIOModule_DiscreteWrite(&IOmod, 4, col);    //send first color!
+                                        ^~~
+../src/microcontroller.c:37:40: note: each undeclared identifier is reported only once for each function it appears in
+../src/microcontroller.c:97:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:118:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:139:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+09:35:00 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12100	    724	   3120	  15944	   3e48	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+09:35:21 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12100	    724	   3120	  15944	   3e48	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+09:35:32 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12100	    724	   3120	  15944	   3e48	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+09:35:43 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12020	    724	   3120	  15864	   3df8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+09:38:09 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12020	    724	   3120	  15864	   3df8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+09:55:32 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12020	    724	   3120	  15864	   3df8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+09:58:50 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12020	    724	   3120	  15864	   3df8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+09:59:01 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11972	    724	   3120	  15816	   3dc8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+10:00:08 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11972	    724	   3120	  15816	   3dc8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+10:05:46 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12020	    724	   3120	  15864	   3df8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+10:05:50 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11988	    724	   3120	  15832	   3dd8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+10:06:08 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12044	    724	   3120	  15888	   3e10	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+10:06:37 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12140	    724	   3120	  15984	   3e70	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+10:10:22 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12220	    724	   3120	  16064	   3ec0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+10:24:06 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12224	    724	   3116	  16064	   3ec0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+10:26:56 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12220	    724	   3120	  16064	   3ec0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+10:34:40 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12300	    724	   3120	  16144	   3f10	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+10:35:07 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12296	    724	   3116	  16136	   3f08	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+10:37:11 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12300	    724	   3120	  16144	   3f10	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+10:43:22 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12300	    724	   3120	  16144	   3f10	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+10:45:31 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12300	    724	   3120	  16144	   3f10	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '

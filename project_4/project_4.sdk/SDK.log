@@ -1,0 +1,6 @@
+08:38:30 INFO  : Registering command handlers for SDK TCF services
+08:38:31 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\nhtranngoc\Documents\ECE3829LAB4\project_4\project_4.sdk\temp_xsdb_launch_script.tcl
+08:38:36 INFO  : XSCT server has started successfully.
+08:38:36 INFO  : Successfully done setting XSCT server connection channel  
+08:38:40 INFO  : Successfully done setting SDK workspace  
+08:38:40 INFO  : Processing command line option -hwspec C:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.sdk/mcs_top.hdf.
