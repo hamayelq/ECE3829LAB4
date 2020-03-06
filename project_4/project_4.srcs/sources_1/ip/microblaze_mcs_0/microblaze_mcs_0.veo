@@ -59,8 +59,8 @@ microblaze_mcs_0 your_instance_name (
   .Reset(Reset),              // input wire Reset
   .UART_rxd(UART_rxd),        // input wire UART_rxd
   .UART_txd(UART_txd),        // output wire UART_txd
-  .GPIO1_tri_i(GPIO1_tri_i),  // input wire [0 : 0] GPIO1_tri_i
-  .GPIO1_tri_o(GPIO1_tri_o),  // output wire [8 : 0] GPIO1_tri_o
+  .GPIO1_tri_i(GPIO1_tri_i),  // input wire [1 : 0] GPIO1_tri_i
+  .GPIO1_tri_o(GPIO1_tri_o),  // output wire [18 : 0] GPIO1_tri_o
   .GPIO2_tri_i(GPIO2_tri_i),  // input wire [0 : 0] GPIO2_tri_i
   .GPIO2_tri_o(GPIO2_tri_o),  // output wire [15 : 0] GPIO2_tri_o
   .GPIO3_tri_o(GPIO3_tri_o),  // output wire [3 : 0] GPIO3_tri_o

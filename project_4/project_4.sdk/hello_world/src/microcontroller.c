@@ -6,201 +6,162 @@
 #include "xil_printf.h"
 #include "xiomodule.h"
 
-#define UP 		'w'
-#define DOWN 	's'
-#define LEFT	'a'
-#define RIGHT	'd'
+#define UP 				'w'
+#define DOWN 			's'
+#define LEFT			'a'
+#define RIGHT			'd'
+
+#define MAX_WIDTH 		640
+#define MAX_HEIGHT 		480
+#define BIT_WIDTH 		10
+#define BIT_HEIGHT 		9
+#define STEP_SIZE 		32
+
+#define CHANNEL_I_SW 	1
+#define CHANNEL_I_PBTTN 2
+#define CHANNEL_O_VGA	1
+#define CHANNEL_O_SEG	2
+#define CHANNEL_O_LED 	3
+#define CHANNEL_O_COLOR	4
+
+enum states {
+	WASD, BOUNCE
+} state;
+
+void sendDisplay(XIOModule mod, int hor, int ver);
+void sendSeg(XIOModule mod, int a, int b, int c, int d);
 
 int main() {
-    init_platform();
-    u32 data;
-    XIOModule IOmod;
+	init_platform();
+	u32 data;
+	XIOModule IOmod;
 
-    //Part 1 set up
-    u32 ver = 7;    //init pos
-    u32 hor = 9;    //init pos
-    u32 blockPos = 0;
-    u16 move = 0;
-    u16 sevenSegOut = 0;
-    u8 inputBuf[10];//keyboard input buffer
+	//Part 1 set up
+	uint32_t ver = ((MAX_HEIGHT / STEP_SIZE) - 1) / 2 * STEP_SIZE;    //init pos
+	uint32_t hor = ((MAX_WIDTH / STEP_SIZE) - 1) / 2 * STEP_SIZE;    //init pos
 
-    //Part 2 set up
-    u16 ledButPush = 0; //primitive debouncer
-    u8 ledOut = 1;      //LED output high
-    u32 col = 0x019;   //default color, 15 is green
-    u8 colBuf[4];   //buffer holding input, then shift into color
+	u16 move = 0;
+	u8 inputBuf[10];    //keyboard input buffer
 
-    data = XIOModule_Initialize(&IOmod, XPAR_IOMODULE_0_DEVICE_ID);
-    data = XIOModule_Start(&IOmod);
+	//Part 2 set up
+	u16 ledButPush = 0; //primitive debouncer
+	u8 ledOut = 1;      //LED output high
+	u32 col = 0x019;   //default color, 15 is green
+	u8 colBuf[4];   //buffer holding input, then shift into color
 
-    XIOModule_DiscreteWrite(&IOmod, 4, col);    //send first color!
+	data = XIOModule_Initialize(&IOmod, XPAR_IOMODULE_0_DEVICE_ID);
+	data = XIOModule_Start(&IOmod);
 
-    while(1) {  //run constantly
-        //moving block logic
-        data = XIOModule_Recv(&IOmod, inputBuf, 1);
-        if(move == 0) {
-            //if no previous movement input, check for valid input then change move to 1
-            if(inputBuf[0] == UP) {
-                ver--;
-                move = 1;
-            }
-            else if(inputBuf[0] == DOWN) {
-                ver++;
-                move = 1;
-            }
-            else if(inputBuf[0] == RIGHT) {
-                hor++;
-                move = 1;
-            }
-            else if(inputBuf[0] == LEFT) {
-                hor--;
-                move = 1;
-            }
-        }
-        //set move to 0 if not pressed
-        if(inputBuf[0] != UP
-            && inputBuf[0] != DOWN
-            && inputBuf[0] != RIGHT
-            && inputBuf[0] != LEFT)
-            {
-                move = 0;
-            }
+	XIOModule_DiscreteWrite(&IOmod, CHANNEL_O_COLOR, col);    //send first color!
 
-        //wrapping around logic
-//        if(ver == 15) {
-//        	ver = 0;
-//        } else if(ver < 0) {
-//        	ver = 14;
-//        }
-//
-//        if(hor == 20) {
-//        	hor = 0;
-//        } else if(hor < 0) {
-//        	hor = 19;
-//        }
+	state = WASD; // Init state, starts with default WASD
 
-        //send block movement
-        blockPos |= hor%20;//first 5 bits of blockPos hold horizontal pos
-        blockPos <<= 4; //horizontal left shifted by 4, keep first 4 open
-        blockPos |= ver%15;//first 4 bits of blockPos hold ver, 9 bits in blockPos
-        XIOModule_DiscreteWrite(&IOmod, 1, blockPos); //send data
+	while (1) {  //run constantly
+		data = XIOModule_Recv(&IOmod, inputBuf, 1);
+		switch (state) {
+		//moving block logic
+		case WASD:
+			//if no previous movement input, check for valid input then change move to 1
+			if (move == 0) {
+				if (inputBuf[0] == UP) {
+					if (ver <= STEP_SIZE || ver <= 0) {
+						ver = MAX_HEIGHT - STEP_SIZE;
+					} else {
+						ver -= STEP_SIZE;
+					}
+					move = 1;
 
-        //extra credit, ask user for what color they want blocks
-        if(inputBuf[0] == 'c') {
-            col = 0; //color reset
+				} else if (inputBuf[0] == DOWN) {
+					ver += STEP_SIZE;
+					move = 1;
 
-            xil_printf("What is your preferred red value? Enter values from 0000 to 1111\n\r");
-            int i = 4;
-            while(i < 4) { //get color val
-                char car = inbyte(); //grab value
-                if(car = '1' || car == '0') {
-                    colBuf[i] = car;
-                    i++;
-                }
-                else
-                {
-                    xil_printf("I told you to input either 0s or 1s >:(");
-                }
-            }
-            xil_printf("Your input red value is: %c%c%c%c\n\r", colBuf[0], colBuf[1], colBuf[2], colBuf[3]);
-            for(int i = 0; i < 4; i++) {
-                int whichShift = 0;
-                if(colBuf[i] == '1') whichShift = 1;
-                col |= whichShift;
-                col <<= 1; //make space
-            }
+				} else if (inputBuf[0] == RIGHT) {
+					hor += STEP_SIZE;
+					move = 1;
+				} else if (inputBuf[0] == LEFT) {
+					if (hor <= STEP_SIZE || hor <= 0) {
+						hor = MAX_WIDTH - STEP_SIZE;
+					} else {
+						hor -= STEP_SIZE;
+					}
+					move = 1;
+				}
+			}
+			//set move to 0 if not pressed
+			if (inputBuf[0] != UP && inputBuf[0] != DOWN && inputBuf[0] != RIGHT
+					&& inputBuf[0] != LEFT) {
+				move = 0;
+			}
 
-            xil_printf("What is your preferred blue value? Enter values from 0000 to 1111\n\r");
-            i = 4;
-            while(i < 4) { //get color val
-                char car = inbyte(); //grab value
-                if(car = '1' || car == '0') {
-                    colBuf[i] = car;
-                    i++;
-                }
-                else
-                {
-                    xil_printf("I told you to input either 0s or 1s >:(");
-                }
-            }
-            xil_printf("Your input blue value is: %c%c%c%c\n\r", colBuf[0], colBuf[1], colBuf[2], colBuf[3]);
-            for(int i = 0; i < 4; i++) {
-                int whichShift = 0;
-                if(colBuf[i] == '1') whichShift = 1;
-                col |= whichShift;
-                col <<= 1; //make space
-            }
+			hor = hor % MAX_WIDTH;
+			ver = ver % MAX_HEIGHT;
 
-            xil_printf("What is your preferred green value? Enter values from 0000 to 1111\n\r");
-            i = 4;
-            while(i < 4) { //get color val
-                char car = inbyte(); //grab value
-                if(car = '1' || car == '0') {
-                    colBuf[i] = car;
-                    i++;
-                }
-                else
-                {
-                    xil_printf("I told you to input either 0s or 1s >:(");
-                }
-            }
-            xil_printf("Your input green value is: %c%c%c%c\n\r", colBuf[0], colBuf[1], colBuf[2], colBuf[3]);
-            for(int i = 0; i < 4; i++) {
-                int whichShift = 0;
-                if(colBuf[i] == '1') {
-                	whichShift = 1;
-                }
-                col |= whichShift;
-                if(i != 3) {
-                	col <<= 1; //all 12 bits populated
-                }
-            }
-            XIOModule_DiscreteWrite(&IOmod, 4, col); //send color data 
-        }
-        
+			//send block movement
+			sendDisplay(IOmod, hor, ver);
 
-        //seven seg logic
-        u16 B = (ver%15) >= 10 ? 1 : 0; //vertical tens
-        u16 A = (ver%15) >= 10 ? (ver%15)-10 : ver%15; //vertical ones
-        u16 D = (hor%20) >= 10 ? 1 : 0; //hor tens
-        u16 C = (hor%20) >= 10 ? (hor%20)-10 : hor%20; //hor ones
+			//seven seg logic
+			uint16_t ver_seg = ver / STEP_SIZE;
+			uint16_t hor_seg = hor / STEP_SIZE;
 
-        sevenSegOut |= D;
-        sevenSegOut <<= 4;
-        sevenSegOut |= C;
-        sevenSegOut <<= 4;
-        sevenSegOut |= B;
-        sevenSegOut <<= 4;
-        sevenSegOut |= A;
-        XIOModule_DiscreteWrite(&IOmod, 2, sevenSegOut);
+			u16 B = ver_seg >= 10 ? 1 : 0; //vertical tens
+			u16 A = ver_seg >= 10 ? ver_seg - 10 : ver_seg; //vertical ones
+			u16 D = hor_seg >= 10 ? 1 : 0; //hor tens
+			u16 C = hor_seg >= 10 ? hor_seg - 10 : hor_seg; //hor ones
+			sendSeg(IOmod, A, B, C, D);
 
-        //terminal display
-        data = XIOModule_DiscreteRead(&IOmod, 1);
-        if(data) {
-//          xil_printf("Welcome to Lab 4, written by Hamayel Qureshi and Nam Tran\n\r");
-            xil_printf("The current block positions are: X: %d, Y: %d\n\r", hor%20, ver%15);
-        }
+			//terminal display
+			data = XIOModule_DiscreteRead(&IOmod, CHANNEL_I_SW);
+			if (data) {
+				xil_printf("BlockPos x: %d, y: %d \t hor: %d, ver: %d\n\r", hor,
+						ver, hor_seg, ver_seg);
+			}
 
-//        if()
+			//LED logic
+			data = XIOModule_DiscreteRead(&IOmod, CHANNEL_I_PBTTN);
+			if (!ledButPush && data) {
+				xil_printf(
+						"Welcome to Lab 4, written by Hamayel Qureshi and Nam Tran\n\r");
+				ledOut <<= 1;
+				if (ledOut == 16) {
+					ledOut = 1;
+				}
+				ledButPush = 1;
+			}
 
-        //LED logic
-        data = XIOModule_DiscreteRead(&IOmod, 2);
-        if(!ledButPush && data) {
-        	xil_printf("Welcome to Lab 4, written by Hamayel Qureshi and Nam Tran\n\r");
-            ledOut <<= 1; 
-            if(ledOut == 16) ledOut = 1;
-            ledButPush = 1;
-        }
-        if(!data) ledButPush = 0;
-        XIOModule_DiscreteWrite(&IOmod, 3, ledOut);
-        
+			if (!data) {
+				ledButPush = 0;
+			}
+			XIOModule_DiscreteWrite(&IOmod, CHANNEL_O_LED, ledOut);
 
-        //reset vals
-        blockPos = 0;
-        inputBuf[0] = 0;
-        sevenSegOut = 0;
-        col = 0;
-    }
-    cleanup_platform();
-    return 0;
+			//reset vals
+			inputBuf[0] = 0;
+			col = 0;
+			break;
+		case BOUNCE:
+			break;
+		}
+	}
+
+	cleanup_platform();
+	return 0;
+}
+
+void sendDisplay(XIOModule mod, int hor, int ver) {
+	u32 blockPos = 0;
+	blockPos |= hor;  //first 10 bits of blockPos hold horizontal pos
+	blockPos <<= BIT_HEIGHT; //horizontal left shifted by 9, keep first 9 open
+	blockPos |= ver; //first 9 bits of blockPos hold ver, 10 bits in blockPos
+	XIOModule_DiscreteWrite(&mod, CHANNEL_O_VGA, blockPos); //send data
+}
+
+void sendSeg(XIOModule mod, int a, int b, int c, int d) {
+	u16 sevenSegOut = 0;
+	sevenSegOut |= d;
+	sevenSegOut <<= 4;
+	sevenSegOut |= c;
+	sevenSegOut <<= 4;
+	sevenSegOut |= b;
+	sevenSegOut <<= 4;
+	sevenSegOut |= a;
+	XIOModule_DiscreteWrite(&mod, CHANNEL_O_SEG, sevenSegOut);
 }

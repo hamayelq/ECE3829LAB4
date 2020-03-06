@@ -964,3 +964,1148 @@ mb-size hello_world.elf  |tee "hello_world.elf.size"
   12300	    724	   3120	  16144	   3f10	hello_world.elf
 'Finished building: hello_world.elf.size'
 ' '
+17:01:45 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:83:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:104:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+../src/microcontroller.c:125:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(car = '1' || car == '0') {
+                    ^~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12300	    724	   3120	  16144	   3f10	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+17:03:37 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:31:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11044	    724	   3120	  14888	   3a28	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+17:36:56 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:34:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11044	    724	   3120	  14888	   3a28	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+17:38:13 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:36:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11044	    724	   3120	  14888	   3a28	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+17:39:32 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:36:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11068	    724	   3120	  14912	   3a40	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+17:49:29 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:36:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11076	    724	   3120	  14920	   3a48	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+17:50:27 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:36:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10980	    724	   3120	  14824	   39e8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+17:52:44 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:36:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10976	    724	   3116	  14816	   39e0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+17:55:47 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:107:10: warning: implicit declaration of function 'xil_print'; did you mean 'xil_printf'? [-Wimplicit-function-declaration]
+          xil_print("BlockPos x: %d, y: %d \t hor: %d, ver: %d\n\r", hor, ver, hor/20, ver/20);
+          ^~~~~~~~~
+          xil_printf
+../src/microcontroller.c:36:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/microcontroller.o: in function `main':
+C:\Users\nhtranngoc\Documents\ECE3829LAB4\project_4\project_4.sdk\hello_world\Debug/../src/microcontroller.c:107: undefined reference to `xil_print'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: hello_world.elf] Error 1
+17:56:03 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:36:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10980	    724	   3120	  14824	   39e8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:02:50 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:36:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10984	    724	   3116	  14824	   39e8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:05:36 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:36:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10980	    724	   3120	  14824	   39e8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:13:16 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:50:22: error: unknown type name 'w'
+              ver-=20;w
+                      ^
+../src/microcontroller.c:51:17: warning: unused variable 'move' [-Wunused-variable]
+                 move = 1;
+                 ^~~~
+../src/microcontroller.c:36:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+18:13:19 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:36:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11292	    724	   3120	  15136	   3b20	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:13:32 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:36:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11292	    724	   3120	  15136	   3b20	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:15:07 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:36:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11292	    724	   3120	  15136	   3b20	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:16:45 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:52:23: error: 'STEP_SIZE' undeclared (first use in this function)
+              if(ver < STEP_SIZE) {
+                       ^~~~~~~~~
+../src/microcontroller.c:52:23: note: each undeclared identifier is reported only once for each function it appears in
+../src/microcontroller.c:36:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+18:16:52 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:37:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11316	    724	   3120	  15160	   3b38	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:17:46 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:37:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11320	    724	   3116	  15160	   3b38	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:18:24 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:37:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11340	    724	   3120	  15184	   3b50	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:18:27 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:37:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11028	    724	   3120	  14872	   3a18	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:20:50 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:37:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11028	    724	   3120	  14872	   3a18	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:22:59 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:37:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11044	    724	   3120	  14888	   3a28	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:23:16 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:37:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11044	    724	   3120	  14888	   3a28	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:27:30 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:37:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11044	    724	   3120	  14888	   3a28	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:31:56 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:37:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11052	    724	   3120	  14896	   3a30	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:37:22 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:37:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11004	    724	   3120	  14848	   3a00	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:37:33 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:37:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10956	    724	   3120	  14800	   39d0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:41:29 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:37:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10956	    724	   3120	  14800	   39d0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:44:11 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:42:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10956	    724	   3120	  14800	   39d0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:45:53 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:42:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10976	    724	   3124	  14824	   39e8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:46:59 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:42:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10976	    724	   3124	  14824	   39e8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:51:12 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:42:8: warning: unused variable 'colBuf' [-Wunused-variable]
+     u8 colBuf[4];   //buffer holding input, then shift into color
+        ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10976	    724	   3124	  14824	   39e8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+18:53:13 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:43:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+../src/microcontroller.c: At top level:
+../src/microcontroller.c:155:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+18:54:33 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:43:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+../src/microcontroller.c: At top level:
+../src/microcontroller.c:156:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+18:55:42 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:89:4: error: 'blockPos' undeclared (first use in this function); did you mean 'clock_t'?
+    blockPos |= hor;  //first 5 bits of blockPos hold horizontal pos
+    ^~~~~~~~
+    clock_t
+../src/microcontroller.c:89:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/microcontroller.c:41:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+../src/microcontroller.c: In function 'sendDisplay':
+../src/microcontroller.c:156:27: error: 'IOmod' undeclared (first use in this function)
+  XIOModule_DiscreteWrite(&IOmod, 1, blockPos); //send data
+                           ^~~~~
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+18:56:10 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:89:4: error: 'blockPos' undeclared (first use in this function); did you mean 'clock_t'?
+    blockPos |= hor;  //first 5 bits of blockPos hold horizontal pos
+    ^~~~~~~~
+    clock_t
+../src/microcontroller.c:89:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/microcontroller.c:41:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+18:56:48 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:89:4: warning: implicit declaration of function 'sendDisplay' [-Wimplicit-function-declaration]
+    sendDisplay(IOmod, hor, ver);
+    ^~~~~~~~~~~
+../src/microcontroller.c:134:4: error: 'blockPos' undeclared (first use in this function); did you mean 'clock_t'?
+    blockPos = 0;
+    ^~~~~~~~
+    clock_t
+../src/microcontroller.c:134:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/microcontroller.c:41:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+../src/microcontroller.c: At top level:
+../src/microcontroller.c:148:6: warning: conflicting types for 'sendDisplay'
+ void sendDisplay(XIOModule mod, int hor, int ver) {
+      ^~~~~~~~~~~
+../src/microcontroller.c:89:4: note: previous implicit declaration of 'sendDisplay' was here
+    sendDisplay(IOmod, hor, ver);
+    ^~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+18:57:05 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:136:4: error: 'blockPos' undeclared (first use in this function); did you mean 'clock_t'?
+    blockPos = 0;
+    ^~~~~~~~
+    clock_t
+../src/microcontroller.c:136:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/microcontroller.c:43:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+18:57:35 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:43:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11132	    724	   3128	  14984	   3a88	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+19:00:08 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:102:4: error: 'sevenSegOut' undeclared (first use in this function)
+    sevenSegOut |= D;
+    ^~~~~~~~~~~
+../src/microcontroller.c:102:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/microcontroller.c:43:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+../src/microcontroller.c: In function 'sendSeg':
+../src/microcontroller.c:166:27: error: 'IOmod' undeclared (first use in this function); did you mean 'mod'?
+  XIOModule_DiscreteWrite(&IOmod, 2, sevenSegOut);
+                           ^~~~~
+                           mod
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+19:00:12 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:102:4: error: 'sevenSegOut' undeclared (first use in this function)
+    sevenSegOut |= D;
+    ^~~~~~~~~~~
+../src/microcontroller.c:102:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/microcontroller.c:43:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+19:00:33 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:130:4: error: 'sevenSegOut' undeclared (first use in this function)
+    sevenSegOut = 0;
+    ^~~~~~~~~~~
+../src/microcontroller.c:130:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/microcontroller.c:43:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+19:01:04 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:43:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11352	    724	   3124	  15200	   3b60	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+19:01:33 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:43:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11352	    724	   3124	  15200	   3b60	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+19:06:39 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:43:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11360	    724	   3124	  15208	   3b68	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+19:07:23 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:43:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11360	    724	   3124	  15208	   3b68	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+19:10:39 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:132:36: error: expected expression before ')' token
+    XIOModule_DiscreteWrite(&IOmod, )
+                                    ^
+../src/microcontroller.c:132:4: error: too few arguments to function 'XIOModule_DiscreteWrite'
+    XIOModule_DiscreteWrite(&IOmod, )
+    ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/microcontroller.c:7:
+../../hello_world_bsp/microblaze_I/include/xiomodule.h:484:6: note: declared here
+ void XIOModule_DiscreteWrite(XIOModule *InstancePtr,
+      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/microcontroller.c:46:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+19:10:59 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:46:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11360	    724	   3124	  15208	   3b68	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+19:11:34 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:46:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11360	    724	   3124	  15208	   3b68	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+19:12:22 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:49:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11360	    724	   3124	  15208	   3b68	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+19:12:39 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:49:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11360	    724	   3124	  15208	   3b68	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+19:12:55 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:49:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+../src/microcontroller.c: In function 'sendSeg':
+../src/microcontroller.c:165:32: error: 'CHANNEL_O_SEG' undeclared (first use in this function); did you mean 'CHANNEL_0_SEG'?
+  XIOModule_DiscreteWrite(&mod, CHANNEL_O_SEG, sevenSegOut);
+                                ^~~~~~~~~~~~~
+                                CHANNEL_0_SEG
+../src/microcontroller.c:165:32: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/microcontroller.o] Error 1
+19:13:21 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:50:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11360	    724	   3124	  15208	   3b68	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+19:13:28 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/microcontroller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
+../src/microcontroller.c: In function 'main':
+../src/microcontroller.c:50:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
+'Finished building: ../src/microcontroller.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/microcontroller.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11360	    724	   3124	  15208	   3b68	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '

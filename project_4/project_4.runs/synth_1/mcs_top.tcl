@@ -42,7 +42,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.srcs/sources_1/new/mcs_top.v
 }
 read_vhdl -library xil_defaultlib C:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.srcs/sources_1/new/vga_controller_640_60.vhd
-read_ip -quiet c:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.srcs/sources_1/ip/microblaze_mcs_0/microblaze_mcs_0.xci
+read_ip -quiet C:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.srcs/sources_1/ip/microblaze_mcs_0/microblaze_mcs_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.srcs/sources_1/ip/microblaze_mcs_0/microblaze_mcs_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.srcs/sources_1/ip/microblaze_mcs_0/microblaze_mcs_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.srcs/sources_1/ip/microblaze_mcs_0/bd_0/ip/ip_0/bd_fc5c_0_microblaze_I_0.xdc]
@@ -57,7 +57,7 @@ set_property used_in_implementation false [get_files -all c:/Users/nhtranngoc/Do
 set_property used_in_implementation false [get_files -all c:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.srcs/sources_1/ip/microblaze_mcs_0/mb_bootloop_le.elf]
 set_property used_in_implementation false [get_files -all c:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.srcs/sources_1/ip/microblaze_mcs_0/bd_0/ip/ip_0/data/mb_bootloop_le.elf]
 
-read_ip -quiet c:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+read_ip -quiet C:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]

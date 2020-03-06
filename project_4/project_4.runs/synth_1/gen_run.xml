@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1583250239">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1583451163">
   <File Type="PA-TCL" Name="mcs_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="mcs_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="mcs_top_reports.tcl"/>
@@ -64,9 +64,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="microblaze_mcs_0"/>

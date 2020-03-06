@@ -1,0 +1,133 @@
+//Lab 4
+//Hamayel Qureshi & Nam Tran Ngoc
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xiomodule.h"
+
+#define UP 		'w'
+#define DOWN 	's'
+#define LEFT	'a'
+#define RIGHT	'd'
+
+#define MAX_WIDTH 480
+#define MAX_HEIGHT 640
+#define BIT_WIDTH 9
+#define BIT_HEIGHT 10
+
+int main() {
+    init_platform();
+    u32 data;
+    XIOModule IOmod;
+
+    //Part 1 set up
+    u32 ver = 7;    //init pos
+    u32 hor = 9;    //init pos
+    u32 blockPos = 0;
+    u16 move = 0;
+    u16 sevenSegOut = 0;
+    u8 inputBuf[10];//keyboard input buffer
+
+    //Part 2 set up
+    u16 ledButPush = 0; //primitive debouncer
+    u8 ledOut = 1;      //LED output high
+    u32 col = 0x019;   //default color, 15 is green
+    u8 colBuf[4];   //buffer holding input, then shift into color
+
+    data = XIOModule_Initialize(&IOmod, XPAR_IOMODULE_0_DEVICE_ID);
+    data = XIOModule_Start(&IOmod);
+
+    XIOModule_DiscreteWrite(&IOmod, 4, col);    //send first color!
+
+    while(1) {  //run constantly
+        //moving block logic
+        data = XIOModule_Recv(&IOmod, inputBuf, 1);
+        if(move == 0) {
+            //if no previous movement input, check for valid input then change move to 1
+            if(inputBuf[0] == UP) {
+//                ver--;
+            	ver-=20;
+                move = 1;
+            }
+            else if(inputBuf[0] == DOWN) {
+//                ver++;
+                ver+=20;
+                move = 1;
+            }
+            else if(inputBuf[0] == RIGHT) {
+//                hor++;
+            	hor+=20;
+                move = 1;
+            }
+            else if(inputBuf[0] == LEFT) {
+//                hor--;
+            	hor-=20;
+                move = 1;
+            }
+        }
+        //set move to 0 if not pressed
+        if(inputBuf[0] != UP
+            && inputBuf[0] != DOWN
+            && inputBuf[0] != RIGHT
+            && inputBuf[0] != LEFT)
+            {
+                move = 0;
+            }
+
+        hor = hor % MAX_WIDTH;
+        ver = ver % MAX_HEIGHT;
+
+        //send block movement
+        blockPos |= hor;//first 5 bits of blockPos hold horizontal pos
+        blockPos <<= BIT_HEIGHT; //horizontal left shifted by 4, keep first 4 open
+        blockPos |= ver;//first 4 bits of blockPos hold ver, 9 bits in blockPos
+        XIOModule_DiscreteWrite(&IOmod, 1, blockPos); //send data
+
+        //seven seg logic
+        u16 B = (ver/15) >= 10 ? 1 : 0; //vertical tens
+        u16 A = (ver/15) >= 10 ? (ver/15)-10 : ver/15; //vertical ones
+        u16 D = (hor/20) >= 10 ? 1 : 0; //hor tens
+        u16 C = (hor/20) >= 10 ? (hor/20)-10 : hor/20; //hor ones
+
+        sevenSegOut |= D;
+        sevenSegOut <<= 4;
+        sevenSegOut |= C;
+        sevenSegOut <<= 4;
+        sevenSegOut |= B;
+        sevenSegOut <<= 4;
+        sevenSegOut |= A;
+        XIOModule_DiscreteWrite(&IOmod, 2, sevenSegOut);
+
+        //terminal display
+        data = XIOModule_DiscreteRead(&IOmod, 1);
+        if(data) {
+//          xil_printf("Welcome to Lab 4, written by Hamayel Qureshi and Nam Tran\n\r");
+//            xil_printf("The current block positions are: X: %d, Y: %d\n\r", hor/20, ver/15);
+        	xil_printf("BlockPos x: %d, y: %d \t hor: %d, ver: %d\n\r", hor, ver, hor/20, ver/20);
+        }
+
+//        if()
+
+        //LED logic
+        data = XIOModule_DiscreteRead(&IOmod, 2);
+        if(!ledButPush && data) {
+        	xil_printf("Welcome to Lab 4, written by Hamayel Qureshi and Nam Tran\n\r");
+            ledOut <<= 1; 
+            if(ledOut == 16) ledOut = 1;
+            ledButPush = 1;
+        }
+        if(!data) ledButPush = 0;
+        XIOModule_DiscreteWrite(&IOmod, 3, ledOut);
+        
+
+        //reset vals
+        blockPos = 0;
+        inputBuf[0] = 0;
+        sevenSegOut = 0;
+        col = 0;
+    }
+
+    cleanup_platform();
+    return 0;
+}

@@ -18,8 +18,8 @@ module bd_fc5c_0_wrapper
     UART_rxd,
     UART_txd);
   input Clk;
-  input [0:0]GPIO1_tri_i;
-  output [8:0]GPIO1_tri_o;
+  input [1:0]GPIO1_tri_i;
+  output [18:0]GPIO1_tri_o;
   input [0:0]GPIO2_tri_i;
   output [15:0]GPIO2_tri_o;
   output [3:0]GPIO3_tri_o;
@@ -29,8 +29,8 @@ module bd_fc5c_0_wrapper
   output UART_txd;
 
   wire Clk;
-  wire [0:0]GPIO1_tri_i;
-  wire [8:0]GPIO1_tri_o;
+  wire [1:0]GPIO1_tri_i;
+  wire [18:0]GPIO1_tri_o;
   wire [0:0]GPIO2_tri_i;
   wire [15:0]GPIO2_tri_o;
   wire [3:0]GPIO3_tri_o;

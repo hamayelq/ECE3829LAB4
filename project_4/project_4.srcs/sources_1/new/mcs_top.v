@@ -26,7 +26,7 @@ module mcs_top(
     input           vgaReset,
     input           rx,
     output          tx,
-    input           sw,
+    input  [1:0]    sw,
     input           pushBut,
     output [3:0]    led,
     
@@ -49,12 +49,12 @@ wire blank;
 wire locked;
 wire clk_100M;
 wire clk_25M;
-wire [8:0] outPos;
+wire [18:0] outPos;
 wire [15:0] outSeg;
 wire [11:0] outCol;
 
-wire [3:0] vertPos;
-wire [4:0] horzPos;
+wire [8:0] vertPos;
+wire [9:0] horzPos;
 wire blockConstraint;
 
 clk_wiz_0 clk(
@@ -73,8 +73,8 @@ microblaze_mcs_0 micro (
   .Reset(reset),              // input wire Reset
   .UART_rxd(rx),        // input wire UART_rxd
   .UART_txd(tx),        // output wire UART_txd
-  .GPIO1_tri_i(sw),  // input wire [0 : 0] GPIO1_tri_i
-  .GPIO1_tri_o(outPos),  // output wire [8 : 0] GPIO1_tri_o
+  .GPIO1_tri_i(sw),  // input wire [1 : 0] GPIO1_tri_i
+  .GPIO1_tri_o(outPos),  // output wire [18 : 0] GPIO1_tri_o
   .GPIO2_tri_i(pushBut),  // input wire [0 : 0] GPIO2_tri_i
   .GPIO2_tri_o(outSeg),  // output wire [15 : 0] GPIO2_tri_o
   .GPIO3_tri_o(led),  // output wire [3 : 0] GPIO3_tri_o
@@ -102,12 +102,22 @@ vga_controller_640_60 u2 (
 );
 
 
-assign vertPos = outPos[3:0];
-assign horzPos = outPos[8:4];
+//assign vertPos = outPos[3:0];
+//assign horzPos = outPos[8:4];
+
+//assign blockConstraint = 
+//    (vcount >= 32 * vertPos && vcount <= 32 * vertPos + 32) &&
+//     (hcount >= 32 * horzPos && hcount <= 32 * horzPos + 32);
+
+assign vertPos = outPos[8:0];
+assign horzPos = outPos[18:9];
+
+wire [5:0] blockSize;
+assign blockSize = (sw[1] == 0) ? 6'd32 : 6'd20;
 
 assign blockConstraint = 
-    (vcount >= 32 * vertPos && vcount <= 32 * vertPos + 32) &&
-     (hcount >= 32 * horzPos && hcount <= 32 * horzPos + 32);
+    (vcount >= vertPos && vcount <= vertPos + blockSize) &&
+     (hcount >= horzPos && hcount <= horzPos + blockSize);
                              
 assign vgaRed = blank ? zeroes : blockConstraint ? outCol[11:8] : zeroes;
 assign vgaBlue = blank ? zeroes : blockConstraint ? outCol[7:4] : zeroes;

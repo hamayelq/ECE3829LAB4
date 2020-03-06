@@ -2147,3 +2147,43 @@ java.lang.NullPointerException
 
 !ENTRY com.xilinx.sdk.utils 1 0 2020-03-03 10:49:33.829
 !MESSAGE Executed Webtalk command
+!SESSION 2020-03-05 17:01:02.645 -----------------------------------------------
+eclipse.buildId=2019.1
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.sdk
+
+!ENTRY org.eclipse.ui 2 0 2020-03-05 17:01:08.541
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-03-05 17:01:08.541
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2020-03-05 17:01:09.090
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-03-05 17:01:09.090
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-03-05 17:01:23.424
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-03-05 17:01:23.458
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-03-05 17:01:23.479
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-03-05 17:01:23.484
+!MESSAGE XSCT Command: [setws C:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.sdk], Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-03-05 17:01:25.153
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-03-05 17:01:25.155
+!MESSAGE XSCT command with result: [setws C:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.sdk], Result: [null, ]. Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-03-05 17:01:25.223
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.sdk/mcs_top_hw_platform_0/system.hdf], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-03-05 17:01:27.745
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/nhtranngoc/Documents/ECE3829LAB4/project_4/project_4.sdk/mcs_top_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-3

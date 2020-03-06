@@ -1,18 +1,12 @@
-10:45:31 **** Auto Build of configuration Debug for project hello_world ****
+19:13:28 **** Auto Build of configuration Debug for project hello_world ****
 make all 
 'Building file: ../src/microcontroller.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/microcontroller.o" -I../../hello_world_bsp/microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/microcontroller.d" -MT"src/microcontroller.o" -o "src/microcontroller.o" "../src/microcontroller.c"
 ../src/microcontroller.c: In function 'main':
-../src/microcontroller.c:96:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-                 if(car = '1' || car == '0') {
-                    ^~~
-../src/microcontroller.c:117:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-                 if(car = '1' || car == '0') {
-                    ^~~
-../src/microcontroller.c:138:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-                 if(car = '1' || car == '0') {
-                    ^~~
+../src/microcontroller.c:50:5: warning: unused variable 'colBuf' [-Wunused-variable]
+  u8 colBuf[4];   //buffer holding input, then shift into color
+     ^~~~~~
 'Finished building: ../src/microcontroller.c'
 ' '
 'Building target: hello_world.elf'
@@ -23,9 +17,9 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_I/lib -ml
 'Invoking: MicroBlaze Print Size'
 mb-size hello_world.elf  |tee "hello_world.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  12300	    724	   3120	  16144	   3f10	hello_world.elf
+  11360	    724	   3124	  15208	   3b68	hello_world.elf
 'Finished building: hello_world.elf.size'
 ' '
 
-10:45:32 Build Finished (took 830ms)
+19:13:29 Build Finished (took 826ms)
 

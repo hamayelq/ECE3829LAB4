@@ -158,9 +158,9 @@ proc create_root_design { parentCell } {
   set GPIO1 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 GPIO1 ]
   set_property -dict [ list \
    CONFIG.C_GPI1_INTERRUPT {0} \
-   CONFIG.C_GPI1_SIZE {1} \
+   CONFIG.C_GPI1_SIZE {2} \
    CONFIG.C_GPO1_INIT {0x00000000} \
-   CONFIG.C_GPO1_SIZE {9} \
+   CONFIG.C_GPO1_SIZE {19} \
    CONFIG.C_USE_GPI1 {1} \
    CONFIG.C_USE_GPO1 {1} \
    ] $GPIO1
@@ -233,9 +233,9 @@ proc create_root_design { parentCell } {
   # Create instance: iomodule_0, and set properties
   set iomodule_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:iomodule:3.1 iomodule_0 ]
   set_property -dict [ list \
-   CONFIG.C_GPI1_SIZE {1} \
+   CONFIG.C_GPI1_SIZE {2} \
    CONFIG.C_GPI2_SIZE {1} \
-   CONFIG.C_GPO1_SIZE {9} \
+   CONFIG.C_GPO1_SIZE {19} \
    CONFIG.C_GPO2_SIZE {16} \
    CONFIG.C_GPO3_SIZE {4} \
    CONFIG.C_GPO4_SIZE {12} \
