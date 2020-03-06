@@ -2,9 +2,11 @@
 //Hamayel Qureshi & Nam Tran Ngoc
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "platform.h"
 #include "xil_printf.h"
 #include "xiomodule.h"
+#include "sleep.h"
 
 #define UP 				'w'
 #define DOWN 			's'
@@ -19,15 +21,27 @@
 
 #define CHANNEL_I_SW 	1
 #define CHANNEL_I_PBTTN 2
+
 #define CHANNEL_O_VGA	1
 #define CHANNEL_O_SEG	2
 #define CHANNEL_O_LED 	3
 #define CHANNEL_O_COLOR	4
 
+#define BOUNCE_SIZE 20
+
 enum states {
-	WASD, BOUNCE
+	WASD,
+	BOUNCE
 } state;
 
+// Extra credit setup
+int xspeed = 10;
+int yspeed = 10;
+int xpos = 320;
+int ypos = 240;
+
+void checkCollision();
+void pickColor();
 void sendDisplay(XIOModule mod, int hor, int ver);
 void sendSeg(XIOModule mod, int a, int b, int c, int d);
 
@@ -46,13 +60,13 @@ int main() {
 	//Part 2 set up
 	u16 ledButPush = 0; //primitive debouncer
 	u8 ledOut = 1;      //LED output high
-	u32 col = 0x019;   //default color, 15 is green
-	u8 colBuf[4];   //buffer holding input, then shift into color
+	u32 col = 0x019;   //default color, 019 is green
 
 	data = XIOModule_Initialize(&IOmod, XPAR_IOMODULE_0_DEVICE_ID);
 	data = XIOModule_Start(&IOmod);
 
 	XIOModule_DiscreteWrite(&IOmod, CHANNEL_O_COLOR, col);    //send first color!
+	srand(0);
 
 	state = WASD; // Init state, starts with default WASD
 
@@ -111,9 +125,11 @@ int main() {
 
 			//terminal display
 			data = XIOModule_DiscreteRead(&IOmod, CHANNEL_I_SW);
-			if (data) {
+			if (data == 1) {
 				xil_printf("BlockPos x: %d, y: %d \t hor: %d, ver: %d\n\r", hor,
 						ver, hor_seg, ver_seg);
+			} else if(data > 1) {
+				state = BOUNCE;
 			}
 
 			//LED logic
@@ -138,12 +154,48 @@ int main() {
 			col = 0;
 			break;
 		case BOUNCE:
+			xil_printf("You are now in the B O U N C E Z O N E\n\r");
+
+			xpos+=xspeed;
+			ypos+=yspeed;
+			checkCollision(IOmod);
+			sendDisplay(IOmod, xpos, ypos);
+			// 60FPS babyyy
+			usleep(16666);
+
+			data = XIOModule_DiscreteRead(&IOmod, CHANNEL_I_SW);
+			if(data < 2) {
+				state = WASD;
+			}
 			break;
 		}
 	}
 
 	cleanup_platform();
 	return 0;
+}
+
+// Pick a random color
+void pickColor(XIOModule mod) {
+	uint8_t r = rand() % 15;
+	uint8_t g = rand() % 15;
+	uint8_t b = rand() % 15;
+
+	uint16_t rgb = (r << 8) | (b << 4) | g;
+	XIOModule_DiscreteWrite(&mod, CHANNEL_O_COLOR, rgb);    //send first color!
+}
+
+// Check for border collision
+void checkCollision(XIOModule mod) {
+	if(xpos+BOUNCE_SIZE >= MAX_WIDTH || xpos <= 0) {
+		xspeed *= -1;
+		pickColor(mod);
+	}
+
+	if(ypos+BOUNCE_SIZE >= MAX_HEIGHT || ypos <= 0) {
+		yspeed *= -1;
+		pickColor(mod);
+	}
 }
 
 void sendDisplay(XIOModule mod, int hor, int ver) {

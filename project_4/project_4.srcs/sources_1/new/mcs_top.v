@@ -101,24 +101,18 @@ vga_controller_640_60 u2 (
     .blank(blank)
 );
 
-
-//assign vertPos = outPos[3:0];
-//assign horzPos = outPos[8:4];
-
-//assign blockConstraint = 
-//    (vcount >= 32 * vertPos && vcount <= 32 * vertPos + 32) &&
-//     (hcount >= 32 * horzPos && hcount <= 32 * horzPos + 32);
-
 assign vertPos = outPos[8:0];
 assign horzPos = outPos[18:9];
 
+// Set the size of the block based on mode: 32x32 for WASD mode, and 20x20 for Bounce (extra credit) mode
 wire [5:0] blockSize;
 assign blockSize = (sw[1] == 0) ? 6'd32 : 6'd20;
 
 assign blockConstraint = 
     (vcount >= vertPos && vcount <= vertPos + blockSize) &&
      (hcount >= horzPos && hcount <= horzPos + blockSize);
-                             
+
+// Set color based on MicroBlaze output signal                             
 assign vgaRed = blank ? zeroes : blockConstraint ? outCol[11:8] : zeroes;
 assign vgaBlue = blank ? zeroes : blockConstraint ? outCol[7:4] : zeroes;
 assign vgaGreen = blank ? zeroes : blockConstraint ? outCol[3:0] : zeroes;                             
